@@ -50,16 +50,3 @@ CREATE TABLE reservations (
   CONSTRAINT chk_time_valid
     CHECK (end_time > start_time)
 );
-
-
-/* Relationships */
-
-Ref: users.id < user_profiles.user_id
-
-Ref: users.id < parking_lots.admin_id
-
-Ref: parking_lots.id < parking_slots.parking_lot_id
-
-Ref: users.id < reservations.user_id
-
-Ref: parking_slots.id < reservations.parking_slot_id
